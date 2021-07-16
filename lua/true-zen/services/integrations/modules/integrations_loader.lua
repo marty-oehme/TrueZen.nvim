@@ -37,7 +37,7 @@ function M.load_integrations()
             goto continue
         end
 
-        if (opts["integrations"][integration] == true) then
+        if (opts["integrations"][integration] ~= false) then
             if
                 (integration == "vim_airline" or integration == "vim_powerline" or integration == "express_line" or
                     integration == "lualine")
@@ -83,7 +83,7 @@ function M.unload_integrations()
             goto continue
         end
 
-        if (opts["integrations"][integration] == true) then
+        if (opts["integrations"][integration] ~= false) then
             if
                 (integration == "vim_airline" or integration == "vim_powerline" or integration == "express_line" or
                     integration == "lualine")
